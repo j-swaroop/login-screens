@@ -38,7 +38,7 @@ emailField.addEventListener('input', (e) => {
   let value = e.target.value
   userData.email = value
 
-  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  const emailRegex = /(?:[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-zA-Z0-9-]*[a-zA-Z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
   if (emailRegex.test(value)) {
     emailField.classList.remove('error-state');
   } else {
@@ -191,6 +191,14 @@ signUpForm.addEventListener('submit', (event) => {
     return;
   }
 
+  const phonePattern = /^\+?[1-9]\d{1,14}$/; 
+  const isValidPhone = phonePattern.test(phone);
+
+  if (!isValidPhone) {
+    phoneField.classList.add('error-state');
+    return; 
+  }
+
   const isLengthValid = password.length >= 8;
   const hasUppercase = /[A-Z]/.test(password);
   const hasNumber = /[0-9]/.test(password);
@@ -200,9 +208,5 @@ signUpForm.addEventListener('submit', (event) => {
     return; 
   }
 
-  const phoneRegex = /^[0-9]{10}$/;
-  if (!phoneRegex.test(phone)) {
-    phoneField.classList.add('error-state');
-    return; 
-  }
+  
 })
