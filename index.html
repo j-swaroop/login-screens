@@ -1,0 +1,147 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./scss/style.css" />
+  </head>
+
+  <body>
+    <div class="default-page-wrapper">
+      <div class="default-page-content-wrapper">
+        <div class="header">
+          <div class="app-logo-wrapper image-wrapper">
+            <img src="./assets/foyrLogo.png" alt="Foyr-logo" />
+          </div>
+        </div>
+        <div class="left-section">
+          <div class="left-section-content-wrapper">
+            <form class="sign-up-form-wrapper" id="signUpForm">
+              <div class="title-section">
+                <div class="title">Sign up</div>
+                <div class="text">One stop for all interior designers</div>
+              </div>
+              <div class="user-name-email-wrapper">
+                <div class="user-name-wrapper">
+                  <label class="label" for="usernameField">Username*</label>
+                  <input
+                    id="usernameField"
+                    type="text"
+                    placeholder="Enter"
+                    class="base-input"
+                  />
+                </div>
+                <div class="email-wrapper">
+                  <label class="label" for="email">Email*</label>
+                  <input
+                    id="email"
+                    type="email"
+                    placeholder="Enter"
+                    class="base-input"
+                  />
+                </div>
+              </div>
+              <div class="input-wrapper">
+                <label class="label" for="phone">Phone Number*</label>
+                <div class="phone-num-feild-wrapper">
+                  <div class="dropdown-wrapper">
+                    <div class="dropdown-container" tabindex="-1">
+                      <div class="dropdown-toggle" id="dropdown-toggle">
+                        <div class="dropdown-selected-option">
+                          <img
+                            src="https://flagcdn.com/w320/in.png"
+                            alt=""
+                            id="dropdownItemImg"
+                          />
+                          <span id="dropdownItemText">+91</span>
+                          <svg
+                            width="8"
+                            height="4"
+                            viewBox="0 0 8 4"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M4.00338 4C3.85221 4 3.70104 3.94431 3.5817 3.82496L0.773146 1.01641C0.542415 0.785679 0.542415 0.403779 0.773146 0.173048C1.00388 -0.0576827 1.38578 -0.0576827 1.61651 0.173048L4.00338 2.55992L6.39025 0.173048C6.62098 -0.0576827 7.00288 -0.0576827 7.23361 0.173048C7.46434 0.403779 7.46434 0.785679 7.23361 1.01641L4.42506 3.82496C4.30572 3.94431 4.15455 4 4.00338 4Z"
+                              fill="#6B7280"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="dropdown-menu" id="dropdown-menu"></div>
+                    </div>
+                  </div>
+
+                  <input
+                    id="phone"
+                    type="tel"
+                    placeholder="Enter"
+                    class="base-input"
+                  />
+                </div>
+              </div>
+              <div class="input-wrapper">
+                <label class="label" for="password">Password*</label>
+                <input
+                  id="password"
+                  type="password"
+                  placeholder="Enter"
+                  class="base-input"
+                />
+                <div class="tooltip-wrapper">
+                  <div class="tooltip-title">
+                    <span>Password must contain:</span>
+                  </div>
+                  <div id="length" class="validation-item">
+                    <img src="./assets/close-circle.png" alt="" />
+                    <div>At least 8 characters</div>
+                  </div>
+                  <div id="uppercase" class="validation-item">
+                    <img src="./assets/close-circle.png" alt="" />
+                    <div>At least one uppercase letter</div>
+                  </div>
+                  <div id="special" class="validation-item">
+                    <img src="./assets/close-circle.png" alt="" />
+                    <div>At least one special character</div>
+                  </div>
+                  <div id="number" class="validation-item">
+                    <img src="./assets/close-circle.png" alt="" />
+                    <div>At least one number</div>
+                  </div>
+                </div>
+              </div>
+              <div class="primary-button-wrapper">
+                <button class="primary-button">Sign up</button>
+              </div>
+            </form>
+
+            <!-- <div class="left-section-base-content-wrapper">
+                        <div class="title-section"> 
+                            <div class="title">
+                                Welcome Joseph 🎊 
+                            </div>
+                            <div class="text">
+                                Lets Personalize, this will take only a minute!
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label class="label" for="companyName">Company Name</label>
+                            <input id="companyName" type="text" placeholder="Enter" class="base-input"/>
+                        </div>
+                        <div class="primary-button-wrapper">
+                            <button class="primary-button">
+                                Continue
+                            </button>
+                        </div>
+                    </div> -->
+          </div>
+        </div>
+        <div class="right-section">
+          <div class="right-section-img-wrapper image-wrapper">
+            <img src="./assets/rightSection.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js" type="module" defer></script>
+  </body>
+</html>
