@@ -195,7 +195,7 @@ signUpForm.addEventListener('submit', (event) => {
   const hasUppercase = /[A-Z]/.test(password);
   const hasNumber = /[0-9]/.test(password);
   const hasSpecial = /[!@#$%^&*]/.test(password);
-  if (isLengthValid && hasUppercase && hasNumber && hasNumber) { 
+  if (!isLengthValid && !hasUppercase && !hasNumber && !hasSpecial) { 
     passwordField.classList.add('error-state');
     return; 
   }
